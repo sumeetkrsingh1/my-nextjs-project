@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/* Brand design tokens based on KNOCKES plan */
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a; /* slate-900 */
+  --brand-primary: #22C55E; /* Primary Green */
+  --brand-primary-dark: #15803D; /* Dark Green */
+  --brand-primary-light: #DCFCE7; /* Light Green */
+  --brand-accent: #3B82F6; /* Accent Blue */
+  --brand-warning: #F59E0B; /* Warning Orange */
+  --brand-error: #EF4444; /* Error Red */
+  --muted: #64748B; /* Neutral Gray */
+  color-scheme: light; /* force light theme for consistent UI */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--brand-primary);
+  --color-primary-foreground: #ffffff;
+  --color-muted: var(--muted);
+  --color-accent: var(--brand-accent);
+  --color-warning: var(--brand-warning);
+  --color-destructive: var(--brand-error);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-card: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+/* Disable automatic dark mode to keep the experience bright and high-contrast */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* High-contrast, accessible defaults for form controls */
+input, select, textarea, .input-field {
+  background-color: #ffffff;
+  color: #0f172a; /* slate-900 */
+  border: 1px solid #e2e8f0; /* slate-200 */
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s ease-in-out;
+  /* Prevent text overlap with browser number spinner */
+  -moz-appearance: textfield;
+}
+
+/* Remove WebKit spinner arrows so they don't collide with prefix */
+.input-field::-webkit-outer-spin-button,
+.input-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-field {
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  line-height: 1.6; /* increases vertical room so prefix/suffix never collide */
+  padding-top: 0.6rem; /* ensure text sits centered after extra left padding */
+  padding-bottom: 0.6rem;
+  font-variant-numeric: tabular-nums; /* keeps numbers from shifting */
+}
+
+.input-field:hover {
+  border-color: #cbd5e1; /* slate-300 */
+}
+
+input::placeholder, textarea::placeholder {
+  color: #94a3b8; /* slate-400 */
+}
+input:focus, select:focus, textarea:focus, .input-field:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+.container-max {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: var(--brand-primary-light);
+  color: var(--brand-primary-dark);
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 150ms, box-shadow 150ms, color 150ms, border-color 150ms;
+}
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+}
+.btn-primary {
+  background-color: var(--brand-primary);
+  color: #ffffff;
+}
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.25);
+}
+.btn-secondary {
+  background-color: #ffffff;
+  color: #0f172a; /* slate-900 */
+  border: 1px solid #cbd5e1; /* slate-300 */
+}
+.btn-secondary:hover {
+  background-color: #f8fafc; /* slate-50 */
+}
+.btn-sm { padding: 0.5rem 0.75rem; font-size: 0.875rem; }
+.btn-md { padding: 0.6rem 1rem; font-size: 0.95rem; }
+.btn-lg { padding: 0.75rem 1.25rem; font-size: 1rem; }
+
+/* Micro animations */
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fade-in-up 280ms ease both; }

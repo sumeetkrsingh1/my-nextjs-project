@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" role="img" aria-label="Knockes">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect rx="8" ry="8" width="40" height="40" fill="url(#g)"/>
+    <path fill="#fff" d="M11 24l9-8 9 8v3h-4v-2l-5-4-5 4v2h-4z"/>
+    <text x="52" y="26" font-family="Inter, ui-sans-serif, system-ui" font-size="20" font-weight="700" fill="#0f172a">Knockes</text>
+  </g>
+</svg>
+
