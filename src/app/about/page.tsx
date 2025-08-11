@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+export const runtime = 'experimental-edge';
 export default function AboutPage() {
   return (
     <div>

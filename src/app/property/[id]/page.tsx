@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { demoProperties, formatCurrency } from "@/lib/mockData";
 import PropertyMap from "@/components/PropertyMap";
-
+export const runtime = 'experimental-edge';
 export default async function PropertyDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const property = demoProperties.find((p) => p.id === id);

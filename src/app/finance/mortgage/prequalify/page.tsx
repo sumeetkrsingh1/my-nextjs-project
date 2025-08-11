@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+export const runtime = 'experimental-edge';
 export default function MortgagePrequalifyPage() {
   const [income, setIncome] = useState(6_000_000);
   const [credit, setCredit] = useState("Good (680-739)");

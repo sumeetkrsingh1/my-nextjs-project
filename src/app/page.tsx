@@ -2,7 +2,7 @@ import { Hero } from "@/components/Hero";
 import { PropertyCard } from "@/components/PropertyCard";
 import { demoProperties, loanTypes } from "@/lib/mockData";
 import { AIMatchingTeaser } from "@/components/AIMatchingTeaser";
-
+export const runtime = 'experimental-edge';
 export default function Home() {
   return (
     <div>

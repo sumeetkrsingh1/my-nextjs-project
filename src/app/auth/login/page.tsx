@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useAuth } from "@/components/AuthProvider";
 import Link from "next/link";
 import Image from "next/image";
-
+export const runtime = 'experimental-edge';
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

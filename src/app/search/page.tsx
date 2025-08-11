@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { demoProperties } from "@/lib/mockData";
 import { PropertyCard } from "@/components/PropertyCard";
-
+export const runtime = 'experimental-edge';
 export default function SearchPage() {
   const [q, setQ] = useState("");
   const results = demoProperties.filter((p) => p.title.toLowerCase().includes(q.toLowerCase()));

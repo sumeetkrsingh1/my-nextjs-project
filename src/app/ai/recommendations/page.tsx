@@ -1,6 +1,6 @@
 import { demoProperties } from "@/lib/mockData";
 import { PropertyCard } from "@/components/PropertyCard";
-
+export const runtime = 'experimental-edge';
 export default function AIRecommendationsPage() {
   return (
     <div className="container-max py-8">

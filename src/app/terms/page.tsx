@@ -1,3 +1,4 @@
+export const runtime = 'experimental-edge';
 export default function TermsPage() {
   return (
     <div className="container-max py-8 prose prose-slate">

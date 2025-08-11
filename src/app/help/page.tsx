@@ -1,3 +1,4 @@
+export const runtime = 'experimental-edge';
 export default function HelpCenterPage() {
   return (
     <div className="container-max py-8">

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import { demoProperties, Property, formatCurrency } from "@/lib/mockData";
 import { PropertyCard } from "@/components/PropertyCard";
-
+export const runtime = 'experimental-edge';
 type ViewMode = "grid" | "list";
 type SortKey = "relevance" | "price-asc" | "price-desc" | "beds";
 

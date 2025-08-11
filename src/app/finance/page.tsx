@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { demoFinanceStats } from "@/lib/mockData";
-
+export const runtime = 'experimental-edge';
 export default function FinanceHubPage() {
   const stats = demoFinanceStats;
   return (

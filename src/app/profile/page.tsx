@@ -2,7 +2,7 @@
 import { useAuth } from "@/components/AuthProvider";
 import Link from "next/link";
 import Image from "next/image";
-
+export const runtime = 'experimental-edge';
 export default function ProfilePage() {
   const { user, logout } = useAuth();
 

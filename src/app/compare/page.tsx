@@ -2,7 +2,7 @@
 import { demoProperties, formatCurrency, Property } from "@/lib/mockData";
 import { DragDropContext, Draggable, Droppable, DropResult } from "@hello-pangea/dnd";
 import { useMemo, useState } from "react";
-
+export const runtime = 'experimental-edge';
 type ColumnKey = "pool" | "selected";
 
 export default function ComparePage() {
