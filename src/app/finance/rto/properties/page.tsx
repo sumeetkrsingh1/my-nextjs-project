@@ -1,6 +1,7 @@
 import { demoProperties } from "@/lib/mockData";
 import { PropertyCard } from "@/components/PropertyCard";
-export const runtime = 'experimental-edge';
+export const runtime = 'edge';
+
 export default function RTOPropertiesPage() {
   const rtoProps = demoProperties.filter((p) => p.type === "rto");
   return (

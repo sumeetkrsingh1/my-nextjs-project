@@ -2,7 +2,8 @@
 import { Suspense, useMemo, useState } from "react";
 import { demoProperties, formatCurrency } from "@/lib/mockData";
 import { useSearchParams } from "next/navigation";
-export const runtime = 'experimental-edge';
+export const runtime = 'edge';
+
 export default function RTOCalculatorPage() {
   return (
     <Suspense fallback={<div className="container-max py-8">Loading…</div>}>

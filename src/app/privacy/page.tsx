@@ -1,4 +1,5 @@
-export const runtime = 'experimental-edge';
+export const runtime = 'edge';
+
 export default function PrivacyPage() {
   return (
     <div className="container-max py-8 prose prose-slate">

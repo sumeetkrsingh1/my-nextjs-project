@@ -1,6 +1,7 @@
 import { demoProperties } from "@/lib/mockData";
 import { PropertyCard } from "@/components/PropertyCard";
-export const runtime = 'experimental-edge';
+export const runtime = 'edge';
+
 export default function WishlistPage() {
   const saved = demoProperties.slice(0, 2);
   return (

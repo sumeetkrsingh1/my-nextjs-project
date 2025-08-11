@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-export const runtime = 'experimental-edge';
+export const runtime = 'edge';
+
 export default function RTOApplyPage() {
   const [step, setStep] = useState(1);
   return (

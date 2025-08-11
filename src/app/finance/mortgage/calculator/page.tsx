@@ -2,7 +2,8 @@
 import { useMemo, useState } from "react";
 import { calculateMortgage, formatCurrency, loanTypes, LoanProgram } from "@/lib/mockData";
 import Link from "next/link";
-export const runtime = 'experimental-edge';
+export const runtime = 'edge';
+
 export default function MortgageCalculatorPage() {
   const [homePrice, setHomePrice] = useState(25_000_000);
   const [downPayment, setDownPayment] = useState(5_000_000);
