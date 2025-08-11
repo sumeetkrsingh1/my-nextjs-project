@@ -1,3 +1,5 @@
+import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
+
 const nextConfig = {
   images: {
     remotePatterns: [
